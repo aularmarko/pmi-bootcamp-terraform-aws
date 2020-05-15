@@ -1,0 +1,3 @@
+# Ansible Architecture
+
+![](ansiblearchitecture.jpeg)
