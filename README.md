@@ -73,7 +73,7 @@ Once the hosts are deployed, they already have the webserver installed and worki
 
 ## Step 1:
 
-**Create Ansible Playbook with the necessary files to install and start a webserver and display a website.**
+**Create Ansible Playbook with the necessary files to install and start a webserver and deploy a website.**
 
 For example: You must install and start Apache, install Git and clone the website code from your repository and move it to the corresponding directory to publish it. 
 
