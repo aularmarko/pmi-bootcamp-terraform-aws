@@ -31,6 +31,44 @@ For independent teams and small to medium-sized businesses, Terraform Cloud is a
 
 # Using Terraform Enterprise — Create Infrastructure
 
+## Create a Organization:
+
+Organizations are a shared space for teams to collaborate on workspaces in Terraform Cloud.
+
+Users can create new organizations by clicking the "Create new organization" button in the organization switcher menu. The new organization page also displays automatically when the currently logged-in user does not belong to any organizations, as when first logging in as a new user.
+
+![](images/createorganization.png)
+
+
+To create a new organization, provide a unique name and a primary contact email address. Organization names can include numbers, letters, underscores (_), and hyphens (-).
+
+Once you have created an organization, you can invite other users from your organization settings.
+
+## Organization settings:
+
+You can view and manage an organization's settings by clicking the "Settings" link in the top navigation bar.
+
+Only organization owners can manage an organization's settings. However, other users can use this section to view the organization's contact email, view the membership of any teams they belong to, and view the organization's authentication policy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Create A Workspace :
 
 It is recommended to create a workspace per application per environment. E.g. For a given app, there can be workspaces for Dev, Test and Prod environment.
