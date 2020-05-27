@@ -89,6 +89,32 @@ It is recommended to create a workspace per application per environment. E.g. Fo
 ![](images/createworskpaces.jpg)
 
 
+## How Terraform Cloud Uses VCS Access
+Most workspaces in Terraform Cloud are associated with a VCS repository, which provides Terraform configurations for that workspace. To find out which repos are available, access their contents, and create webhooks, Terraform Cloud needs access to your VCS provider.
+
+Although Terraform Cloud's API lets you create workspaces and push configurations to them without a VCS connection, the primary workflow expects every workspace to be backed by a repository.
+
+**To use configurations from VCS, Terraform Cloud needs to do several things:**
+
+- Access a list of repositories, to let you search for repos when creating new workspaces.
+- Register webhooks with your VCS provider, to get notified of new commits to a chosen branch.
+- Download the contents of a repository at a specific commit in order to run Terraform with that code.
+
+## Webhooks
+**Terraform Cloud uses webhooks to monitor new commits and pull requests.**
+
+- When someone adds new commits to a branch, any Terraform Cloud workspaces based on that branch will begin a Terraform run. Usually a user must inspect the plan output and approve an apply, but you can also enable automatic applies on a per-workspace basis. You can prevent automatic runs by locking a workspace.
+
+- When someone submits a pull request/merge request to a branch, any Terraform Cloud workspaces based on that branch will perform a speculative plan with the contents of the request and links to the results on the PR's page. This helps you avoid merging PRs that cause plan failures.
+
+
+
+
+
+
+
+
+
 ## Setup Variables (Terraform & Environment Variables):
 
 Setup Terraform variables and environment variables. In Environment Variable image below, note the checkbox to indicate that variable has sensitive information. If this checkbox is selected, data is encrypted and can not be read or updated. This allows admins to store secrets/keys in a secure way.
