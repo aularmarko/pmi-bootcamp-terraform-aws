@@ -65,7 +65,7 @@ The users page allows organization owners to invite new Terraform Cloud users in
 
 The list of users is split into two tabs: one for currently active users, and one for invited users who haven't accepted their invitations yet. If the lists are large, you can filter them by username or email using the search field at the top. For active users, the list includes usernames, email addresses, avatar icons, two-factor authentication status, and current team memberships.
 
-![](organizationusers.png)
+![](organizationuser.png)
 
 
 
