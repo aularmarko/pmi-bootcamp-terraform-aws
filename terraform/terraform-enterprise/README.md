@@ -50,9 +50,22 @@ You can view and manage an organization's settings by clicking the "Settings" li
 
 Only organization owners can manage an organization's settings. However, other users can use this section to view the organization's contact email, view the membership of any teams they belong to, and view the organization's authentication policy.
 
+![](organizationsettings.png)
 
+**General**
+The general settings page is shown to all users in an organization, and displays the organization's name and contact email.
 
+Organization owners can use this page to update the organization's contact email or delete the organization.
 
+**Plan & Billing**
+The plan and billing page allows organization owners to upgrade to one of Terraform Cloud's paid plans, downgrade to a free plan, or begin a free trial of paid features. It also displays any invoices for previous plan payments.
+
+**Users**
+The users page allows organization owners to invite new Terraform Cloud users into the organization, cancel invitations, and remove existing members.
+
+The list of users is split into two tabs: one for currently active users, and one for invited users who haven't accepted their invitations yet. If the lists are large, you can filter them by username or email using the search field at the top. For active users, the list includes usernames, email addresses, avatar icons, two-factor authentication status, and current team memberships.
+
+![](organizationusers.png)
 
 
 
