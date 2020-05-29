@@ -1,0 +1,39 @@
+{
+  "variables": {
+    "aws_access_key": "",
+    "aws_secret_key": "",
+    "ami_name": "centos7",
+    "region": "us-east-1",
+    "source_ami": "ami-02eac2c0129f5587m",
+    "instance_type": "t2.micro"
+  },
+  "builders": [{
+    "access_key": "{{user `aws_access_key`}}",
+    "secret_key": "{{user `aws_secret_key`}}",
+    "ami_name": "{{user `ami_name`}}.{{timestamp}}",
+    "region" : "{{user `region`}}",
+    "source_ami": "{{user `source_ami`}}",
+    "instance_type": "{{user `instance_type`}}",
+    "ssh_username": "centos",
+    "type": "amazon-ebs"
+  }],
+  "provisioners": [
+    {
+     "type": "shell",
+      "inline": "sudo yum -y install epel-release"
+    },
+    {
+      "type": "shell",
+      "inline": "sudo yum -y install ansible"
+    },
+    {
+      "type": "file",
+      "source": "ansible.yml",
+      "destination": "/home/centos/ansible.yml"
+    },
+    {
+      "type": "ansible-local",
+      "playbook_file": "ansible.yml"
+    }
+  ]
+}
