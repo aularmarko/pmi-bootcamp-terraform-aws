@@ -90,7 +90,7 @@ For example: You must install and start Apache, install Git and clone the websit
 
 **Create the terraform scripts** 
 
-[See instructions in the terraform directory](http://10.252.7.70/markoantonio.aular/bootcamp-terraform-aws/tree/master/terraform)
+[See instructions in the terraform directory](https://github.com/aularmarko/pmi-bootcamp-terraform-aws/tree/master/terraform)
 
 * The terraform tree must have:
     * vars.tf
