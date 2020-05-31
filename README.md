@@ -81,7 +81,7 @@ For example: You must install and start Apache, install Git and clone the websit
 
 **Create your own image with Hashicorp Packer**
 
-[See instructions in the packer directory](http://10.252.7.70/markoantonio.aular/bootcamp-terraform-aws/tree/master/packer)
+[See instructions in the packer directory](https://github.com/aularmarko/pmi-bootcamp-terraform-aws/tree/master/packer)
 
 `Packer will get a local ansible playbook and place it under "/home/centos" in the new image. So, you need the ansible.yml playbook in the same directory as packer.json file`
 
